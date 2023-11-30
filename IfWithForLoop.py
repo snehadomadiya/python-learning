@@ -35,3 +35,10 @@ for x in list:
 
 print(str(findnum1) + " in list " + str(count1) + " time")
 print(str(findnum2) + " in list " + str(count2) + " time") """
+
+names = ["smit", "esha", "sneha", "alas", "akta", "avish"]
+ages = [26, 18, 28, 21, 12, 22]
+
+for e in range(len(names)):
+    if ages[e] > 25:
+        print(names[e])
