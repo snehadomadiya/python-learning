@@ -6,8 +6,8 @@ num = 65
 for x in list:
     if num==x:
         print(str(num) + " in list "+ str(count)+ " time")
+        
  """
-
 # Count a number in list 
 """ list = [25,12,65,89,65]
 findNUm = 65
