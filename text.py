@@ -8,6 +8,29 @@ while True:
 
 name_list = ["smit"]
 
+def disply():
+    print(name_list)
+
+def add_name():
+        name = ip_fun("Enter any name: ")
+        if name in name_list:
+            print(name + " name is already in list.")
+        else:
+            name_list.append(name)
+
+def remove_name():
+    name = ip_fun("Enter remove name: ")
+    if name in name_list:
+        name_list.remove(name)
+    else:
+        print("This name is not in list")
+
+def ip_fun(msg):
+    inpute_var = input(msg)
+    return inpute_var
+
+
+
 
 while True:
     print("--------------------------------------------------------")
@@ -19,22 +42,13 @@ while True:
     input_name = input("Choise a number: ")
 
     if input_name == "2":
-        print(name_list)
+        disply()
 
     elif input_name == "1":
-        name = input("Enter name: ")
-        if name in name_list:
-            print(name + " name is already in list.")
-        else:
-            name_list.append(name)
+        add_name()
 
     elif input_name == "3":
-        name = input("remove name: ")
-        if name in name_list:
-            name_list.remove(name)
-        else:
-            print("This name is not in list")
-
+       remove_name()
     elif input_name == "4":
         break
 
@@ -42,5 +56,4 @@ while True:
         print("wrong input")
         
 
-        
 
