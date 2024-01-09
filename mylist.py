@@ -29,7 +29,7 @@ if is_value_present(mylist, value_check):
 else:
     print("{value_check} is not present in the list.") """
 
-odd = []
+""" odd = []
 even = []
 
 for num in range(1, 21):
@@ -39,4 +39,4 @@ for num in range(1, 21):
         odd.append(num)
 
 print("Odd Numbers:", odd)
-print("Even Numbers:", even)
+print("Even Numbers:", even) """
