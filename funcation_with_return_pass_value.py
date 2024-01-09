@@ -1,7 +1,8 @@
 """ list = []
 while True:
     x = input("Enter value: ")
-    list.append(x)
+    list.append(x)4
+    
     if x == "0":
         break
     print(list) """
@@ -25,6 +26,13 @@ def remove_name():
     else:
         print("This name is not in list")
 
+def find_name():
+    name = ip_fun("Enter any name: ")
+    if name in name_list:
+        print(name + " is availabale in list")
+    else:
+        print(name + " is not available in list")
+        
 def ip_fun(msg):
     inpute_var = input(msg)
     return inpute_var
@@ -38,6 +46,7 @@ while True:
     print("2.Disply Name")
     print("3.Remove Name")
     print("4.exit")
+    print("5.find name")
 
     input_name = input("Choise a number: ")
 
@@ -51,6 +60,8 @@ while True:
        remove_name()
     elif input_name == "4":
         break
+    elif input_name == "5":
+        find_name()
 
     else:
         print("wrong input")
