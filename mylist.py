@@ -40,3 +40,32 @@ for num in range(1, 21):
 
 print("Odd Numbers:", odd)
 print("Even Numbers:", even) """
+
+""" mylist = ['sneha','chirag','hiyan']
+mylist[1] = 'bhavika'
+print(mylist) """
+
+list = ['smit','isha','sneha', "smit", "akash", "smit"]
+
+""" list[2] = 'bhavika'
+print(list) """
+
+""" check='dhyey' in list
+print(check)
+
+ """
+
+""" 
+find_index= list.index('pratik')
+list[find_index]='chirag'
+print(list) """
+
+
+index = 0
+while index < len(list):
+    if list[index] == 'smit':
+        list[index] = 'jignesh'
+        
+    index = index + 1
+
+print(list)
