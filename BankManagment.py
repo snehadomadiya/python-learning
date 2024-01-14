@@ -27,9 +27,19 @@ def display():
         print(str(e[0]) + " | " + e[1] + " | " + e[2] + " | " + str(e[3]) + " | " +str(e[4]))
     print("-------------------------------------------------------------------")
 
+def balance_check():
+    account = input("enter account number: ")
+    for e in list:
+        if str(e[0]) == account:
+            print("----------------------account detail----------------------------")
+            print("balance: " + str(e[4]))
+            print("-------------------------------------------------------------------")
+    return print("-----xxx--------Account do not exist---------------xxx-------------")
+
 while True:
     print("1.create new account")
     print("2.display list")
+    print("3.check balance")
     print("0.exit")
 
     inpute_number = input("choose number: ")
@@ -39,6 +49,8 @@ while True:
             creat_account()
         case '2':
             display()
+        case '3':
+            balance_check()
         case '0':
             break
         case other:
