@@ -24,7 +24,7 @@ while True:
     print("1.plus value")
     print("2.minus value")
     print("3.multiply value")
-    print("4.divide value")5
+    print("4.divide value")
     print("5.break")
 
     input_value = input("Choise a number: ")
