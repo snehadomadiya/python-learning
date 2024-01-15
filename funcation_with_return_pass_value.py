@@ -1,7 +1,7 @@
 """ list = []
 while True:
     x = input("Enter value: ")
-    list.append(x)4
+    list.append(x)
     
     if x == "0":
         break
@@ -57,7 +57,7 @@ while True:
         add_name()
 
     elif input_name == "3":
-       remove_name()
+        remove_name()
     elif input_name == "4":
         break
     elif input_name == "5":
