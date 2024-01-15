@@ -1,6 +1,6 @@
 list = [
-    [0,"sneha","sd@gmail.com",123456789,20000,156],
-    [1,"chirag","cd@gmail.com",987456321,40000,143]
+    [0,"sneha","sd@gmail.com",123456789,10000,"123"],
+    [1,"chirag","cd@gmail.com",987456321,10000,"143"]
 ]
 
 """ index:
@@ -33,26 +33,40 @@ def display():
 def balance_check():
     account = input("enter details: ")
     for e in list:
-        if str(e[0]) == account or account == e[1]:
+        if str(e[0]) == account or account == e[1] or e[2] == account:
             print("----------------------account detail----------------------------")
             print("balance: " + str(e[4]))
             print("-------------------------------------------------------------------")
-    return print("-----xxx--------Account do not exist---------------xxx-------------")
+        elif (list[len(list)-1][0] != account or list[len(list)-1][1] != account or list[len(list)-1][2] != account) and (list[len(list)-1][0] == e[0] or list[len(list)-1][1] == e[1] or list[len(list)-1][2] == e[2]):
+            print("-----xxx--------Account do not exist---------------xxx-------------")
 
-def password():
+def withdraw():
+    enter_account= input("enter your account number: ")
     enter_password = input("enter password: ")
-    enter_name = input("enter your name: ")
     for e in list:
-        if str(e[5]) == enter_password and e[1] == enter_name:
-            print("----------------------account detail----------------------------")
-            print(str(e[0]) + " | " + e[1] + " | " + e[2])
-            print("-------------------------------------------------------------------")
+        if e[5] == enter_password and e[0] == int(enter_account):
+            withdraw_ammount = input("enter your amount: ")
+            e[4] = e[4] - int(withdraw_ammount)
+        elif list[len(list)-1][0] != enter_account and list[len(list)-1][0] == e[0]:
+            print("-----xxx--------Account do not exist---------------xxx-------------")
+
+def add_money():
+    account = input("enter detail: ")
+    amount = input("add money: ")
+
+    for e in list:
+        if str(e[0] )== account or e[1] == account or e[2] == account:
+            e[4] = e[4] + int(amount)
+        elif (list[len(list)-1][0] != account or list[len(list)-1][1] != account or list[len(list)-1][2] != account) and (list[len(list)-1][0] == e[0] or list[len(list)-1][1] == e[1] or list[len(list)-1][2] == e[2]):
+            print("-----xxx--------Account do not exist---------------xxx-------------")
+
 
 while True:
     print("1.create new account")
     print("2.display list")
     print("3.check balance")
-    print("4.password")
+    print("4.withdraw")
+    print("5.add money")
     print("0.exit")
 
     inpute_number = input("choose number: ")
@@ -65,7 +79,9 @@ while True:
         case '3':
             balance_check()
         case '4':
-            password()
+            withdraw()
+        case '5':
+            add_money()
         case '0':
             break
         case other:
