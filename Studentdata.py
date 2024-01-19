@@ -1,6 +1,9 @@
 list = [
     ["Q12354", "Sawarni","sc@gmail.com",3985645458,"data"],
-    ["Q12548","aadhya","ad@gmail.com",9852421222,"MBA"]
+    ["Q12548","aadhya","ad@gmail.com",9852421222,"MBA"],
+    ["Q1257","sweta","sr@gmail.com",95632110,"data"],
+    ["Q0215","yashvi","ys@gmail.com",6545212,"IT"],
+
 ]
 
 """ index:
@@ -28,9 +31,21 @@ def disply():
         print(e[0] + " | " + e[1] + " | " + str(e[3]) + " | " + e[4])
     print("******************************************************************")
 
+def studentlistbycourse():
+
+    course =input("enter course name: ")
+    print("************************student detail***************************")
+    for e in list:
+        if e[4] == course:
+            
+            print(e[0] + " | " + e[1])
+    print("******************************************************************")
+
+
 while True:
     print("1.add new student ")
     print("2.disply student detail")
+    print("3.student detail by course name: ")
     print("0:exit")
 
     input_number = input("enter number: ")
@@ -40,5 +55,7 @@ while True:
             add_student_detail()
         case '2':
             disply()
+        case '3':
+            studentlistbycourse()
         case '0':
             break
