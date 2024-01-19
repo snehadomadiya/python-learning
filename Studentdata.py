@@ -41,11 +41,28 @@ def studentlistbycourse():
             print(e[0] + " | " + e[1])
     print("******************************************************************")
 
+def Qnumber():
+    q_number = input("enter qnumber: ")
+    print("************************student detail***************************")
+    for e in list:
+        if e[0] == q_number:
+            print(e[1] + " | " + e[2] + " | " + str(e[3]) + " | " + e[4])
+    print("******************************************************************")
+
+def change_name():
+    Q_number = input("enter q number: ")
+    new_name = input("enter new name: ")
+    for e in list:
+        if e[0]== Q_number:
+            e[1] = new_name
+
 
 while True:
     print("1.add new student ")
     print("2.disply student detail")
-    print("3.student detail by course name: ")
+    print("3.student detail by course name")
+    print("4.Qnumber")
+    print("5.chnage name")
     print("0:exit")
 
     input_number = input("enter number: ")
@@ -57,5 +74,9 @@ while True:
             disply()
         case '3':
             studentlistbycourse()
+        case '4':
+            Qnumber()
+        case '5':
+            change_name()
         case '0':
             break
